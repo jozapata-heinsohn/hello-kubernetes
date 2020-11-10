@@ -1,0 +1,10 @@
+version: '1'
+services:
+  azure-poc:
+    build: ./azure-poc
+    image: heinsohnpoc.azurecr.io/azure-poc:v1
+    container_name: azure-poc
+    environment:
+      REDIS: azure-poc
+    ports:
+        - "8080:80"
