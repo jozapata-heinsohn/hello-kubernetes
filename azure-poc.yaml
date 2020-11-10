@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-poc
+spec:
+    selector:
+        matchLabels:
+            app: azure-poc
+    template:
+        metadata:
+          labels:
+            app: azure-poc
+        spec:
+            containers:
+            - name: azure-poc
+              image: heinsohnpoc.azurecr.io/azure-poc:v1
+              ports:
+              - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: azure-poc
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: azure-poc
