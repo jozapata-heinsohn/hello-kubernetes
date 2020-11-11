@@ -16,6 +16,9 @@ spec:
               image: heinsohnpoc.azurecr.io/azure-poc:v1
               ports:
               - containerPort: 8080
+              env:
+              - name: MESSAGE
+                value: Hola Mundo!
 ---
 apiVersion: v1
 kind: Service
