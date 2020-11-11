@@ -18,7 +18,7 @@ spec:
               - containerPort: 8080
               env:
               - name: MESSAGE
-                value: Hola Mundo!
+                value: Bienvendos a CI/CD!
 ---
 apiVersion: v1
 kind: Service
