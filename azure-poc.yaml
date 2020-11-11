@@ -13,7 +13,7 @@ spec:
         spec:
             containers:
             - name: azure-poc
-              image: heinsohnpoc.azurecr.io/azure-poc:v1
+              image: heinsohnpoc.azurecr.io/azure-poc
               ports:
               - containerPort: 8080
 ---
